@@ -1,21 +1,21 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const navLinks: Array<{ label: string; href: string }> = [
   {
-    label: "Home",
-    href: "/",
+    label: 'Home',
+    href: '/',
   },
   {
-    label: "Portfolio",
-    href: "/portfolio",
+    label: 'Portfolio',
+    href: '/portfolio',
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: 'Contact',
+    href: '/contact',
   },
   {
-    label: "About",
-    href: "/about",
+    label: 'About',
+    href: '/about',
   },
 ];
 
@@ -33,7 +33,7 @@ const Header = () => {
         <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-12">
           {navLinks.map((item) => (
             <Link href={item.href} key={item.label} legacyBehavior>
-              <a className="opacity-80 inline-block transition-all hover:opacity-100 hover:text-black">
+              <a className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100">
                 {item.label}
               </a>
             </Link>

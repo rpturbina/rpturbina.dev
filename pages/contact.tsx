@@ -1,5 +1,5 @@
-import ContactList from "@components/ContactList";
-import DefaultLayout from "@components/DefaultLayout";
+import ContactList from '@components/ContactList';
+import DefaultLayout from '@components/DefaultLayout';
 
 const Contacts = () => {
   return (
@@ -14,13 +14,13 @@ const Contacts = () => {
         <p className="text-center">
           I&apos;m currently open for any new opportunites. If you have any
           questions or just to say hello, please go ahead!
-          <br />I will try my best to reply your message. You can reach me via{" "}
+          <br />I will try my best to reply your message. You can reach me via{' '}
           <a
             href="mailto:rizki.pratama.turbina@gmail.com"
-            className="underline hover:text-black transition-colors"
+            className="underline transition-colors hover:text-black"
           >
             email
-          </a>{" "}
+          </a>{' '}
           or via my accounts below.
         </p>
         <ContactList />

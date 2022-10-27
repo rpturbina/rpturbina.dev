@@ -1,5 +1,5 @@
-import DefaultLayout from "@components/DefaultLayout";
-import ProjectList from "@components/ProjectList";
+import DefaultLayout from '@components/DefaultLayout';
+import ProjectList from '@components/ProjectList';
 
 const Portfolio = () => {
   return (

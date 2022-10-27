@@ -1,4 +1,4 @@
-import { ContactItemProps } from "@typings/index";
+import { ContactItemProps } from '@typings/index';
 
 const ContactItem = ({ label, icon, href }: ContactItemProps) => {
   return (

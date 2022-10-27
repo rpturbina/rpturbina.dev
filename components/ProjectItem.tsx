@@ -1,4 +1,4 @@
-import { ProjectItemProps } from "@typings/index";
+import { ProjectItemProps } from '@typings/index';
 
 const ProjectItem = ({
   title,

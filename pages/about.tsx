@@ -1,5 +1,5 @@
-import DefaultLayout from "@components/DefaultLayout";
-import Image from "next/image";
+import DefaultLayout from '@components/DefaultLayout';
+import Image from 'next/image';
 
 const About = () => {
   return (

@@ -1,6 +1,6 @@
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import Head from "next/head";
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import Head from 'next/head';
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,7 +13,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
         />
       </Head>
       <Header />
-      <main className="max-w-5xl mx-auto">{children}</main>
+      <main className="mx-auto max-w-5xl">{children}</main>
       <Footer />
     </>
   );

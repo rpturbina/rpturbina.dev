@@ -1,22 +1,22 @@
-import { ContactItemProps } from "@typings/index";
-import ContactItem from "@components/ContactItem";
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import { ContactItemProps } from '@typings/index';
+import ContactItem from '@components/ContactItem';
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 
 const contactItems: ContactItemProps[] = [
   {
-    label: "Github Icon",
+    label: 'Github Icon',
     icon: <FaGithubSquare fontSize={35} />,
-    href: "https://github.com/rpturbina",
+    href: 'https://github.com/rpturbina',
   },
   {
-    label: "LinkedIn Icon",
+    label: 'LinkedIn Icon',
     icon: <FaLinkedin fontSize={35} />,
-    href: "https://www.linkedin.com/in/rpturbina/",
+    href: 'https://www.linkedin.com/in/rpturbina/',
   },
   {
-    label: "Instagram Icon",
+    label: 'Instagram Icon',
     icon: <FaInstagramSquare fontSize={35} />,
-    href: "https://www.instagram.com/rpturbina/",
+    href: 'https://www.instagram.com/rpturbina/',
   },
 ];
 
