@@ -11,8 +11,9 @@ export default function Home() {
             src="/images/author-photo-hero.webp"
             alt="rpturbina photo"
             className="mb-8 w-64 rounded-full"
-            height={1024}
-            width={1024}
+            height={512}
+            width={512}
+            priority
           />
           <h2 className="text-2xl font-semibold md:text-3xl">
             &#60; Hello World👋! &#47;&#62;
