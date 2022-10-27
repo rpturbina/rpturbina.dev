@@ -5,3 +5,9 @@ export interface ProjectItemProps {
   repoLink: string;
   demoLink: string;
 }
+
+export interface ContactItemProps {
+  label: string;
+  icon: React.ReactNode;
+  href: string;
+}
