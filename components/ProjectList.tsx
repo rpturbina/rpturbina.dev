@@ -1,7 +1,7 @@
 import ProjectItem from "@components/ProjectItem";
 import { ProjectItemProps } from "@typings/index";
 
-const BASE_DOMAIN = "rpturbina.me";
+const BASE_DOMAIN = "rpturbina.github.io";
 
 const projectItems: ProjectItemProps[] = [
   {
@@ -10,7 +10,7 @@ const projectItems: ProjectItemProps[] = [
       "UrSpotify is a web-based application that can create playlists for the Spotify app easily. This app consume Spotify Web API.",
     stack: "React.js, Chakra UI",
     repoLink: "https://github.com/rpturbina/homework-spotify-app",
-    demoLink: `https://urspotify.${BASE_DOMAIN}/`,
+    demoLink: `https://urspotify.rpturbina.me/`,
   },
   {
     title: "Tribute Page - B. J. Habibie",
