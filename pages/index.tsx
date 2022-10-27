@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <>
       <DefaultLayout>
-        <article id="home" className="hero m-auto min-h-screen max-w-7xl px-4">
+        <section id="home" className="hero m-auto min-h-screen max-w-7xl px-4">
           <Image
             src="/images/author-photo-hero.webp"
             alt="rpturbina photo"
             className="mb-8 w-64 rounded-full"
-            height={256}
-            width={256}
+            height={1024}
+            width={1024}
           />
           <h2 className="text-2xl font-semibold md:text-3xl">
             &#60; Hello World👋! &#47;&#62;
@@ -24,7 +24,7 @@ export default function Home() {
             <strong>Frontend Web Enthusiast</strong> | Bring my frontend
             experiences to solve your problems
           </p>
-        </article>
+        </section>
       </DefaultLayout>
     </>
   );
