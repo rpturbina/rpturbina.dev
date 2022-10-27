@@ -42,10 +42,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-.header-shadow {
-  box-shadow: 0 -5px 20px 0 hsla(0, 0%, 0%, 0.2);
-}
-
 .outer-container:nth-child(even) {
   background-color: #fafbfd;
 }
@@ -158,10 +154,6 @@ body::-webkit-scrollbar {
   row-gap: 0.3rem;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: 1rem;
 }
 

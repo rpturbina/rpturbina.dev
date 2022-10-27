@@ -1,12 +1,20 @@
 import Header from "@components/Header";
-import React from "react";
+import Footer from "@components/Footer";
+import Head from "next/head";
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
+      <Head>
+        <title>rpturbina | Personal Website by Rizki Pratama Turbina</title>
+        <meta
+          name="description"
+          content="Hello World👋! I'm Rizki Pratama Turbina. Frontend Web Enthusiast | Bring my frontend experiences to solve your problems."
+        />
+      </Head>
       <Header />
-      <main>{children}</main>
-      {/* <Footer></Footer> */}
+      <main className="max-w-5xl mx-auto">{children}</main>
+      <Footer />
     </>
   );
 };

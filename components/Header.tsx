@@ -21,8 +21,8 @@ const navLinks: Array<{ label: string; href: string }> = [
 
 const Header = () => {
   return (
-    <header className="header sticky top-0 left-0 right-0 z-10 bg-white transition-all">
-      <nav className="navbar m-auto flex h-16 max-w-5xl items-center justify-between px-8">
+    <header className="header fixed top-0 left-0 right-0 z-10 bg-white/20 backdrop-blur-[20px]">
+      <nav className="navbar m-auto flex h-16 max-w-5xl items-center justify-between px-4">
         <h1>
           <Link href="/" legacyBehavior>
             <a className="author-logo block text-xl font-bold opacity-80 transition-all hover:opacity-100">
