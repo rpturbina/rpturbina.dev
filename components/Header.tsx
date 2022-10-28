@@ -1,4 +1,8 @@
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import Link from 'next/link';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { GrClose } from 'react-icons/gr';
 
 const navLinks: Array<{ label: string; href: string }> = [
   {
@@ -19,7 +23,81 @@ const navLinks: Array<{ label: string; href: string }> = [
   },
 ];
 
+const MobileNavbar = ({
+  state,
+  navLinks,
+  onClose,
+}: {
+  state: boolean;
+  navLinks: Array<{ label: string; href: string }>;
+  onClose: React.ReactEventHandler;
+}) => {
+  const [isBrowser, setIsBrowser] = React.useState<boolean>(false);
+
+  React.useEffect(() => setIsBrowser(true), []);
+
+  React.useEffect(() => {
+    if (isBrowser && state) {
+      document.body.style['overflow'] = 'hidden';
+    } else if (isBrowser && !state) {
+      document.body.style['overflow'] = 'initial';
+    }
+    console.log('use effect!');
+  }, [isBrowser, state]);
+
+  if (isBrowser) {
+    return ReactDOM.createPortal(
+      <nav
+        className={`${
+          state ? 'navbar-show ' : ''
+        }navbar-mobile fixed top-0 bottom-0 -right-64 z-20 min-h-screen w-64 bg-white px-4 transition-all`}
+      >
+        <div className="grid h-16 items-center justify-end " onClick={onClose}>
+          <GrClose
+            fontSize={25}
+            className="hamburger-close flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
+          />
+        </div>
+        <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-8 text-right transition-all">
+          {navLinks.map((item) => (
+            <Link href={item.href} key={item.label} legacyBehavior>
+              <a
+                className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
+                onClick={onClose}
+              >
+                {item.label}
+              </a>
+            </Link>
+          ))}
+        </ul>
+      </nav>,
+      document.getElementById('navbar-root') ?? document.body
+    );
+  }
+  return null;
+};
+
+const Overlay = ({ state }: { state: boolean }) => {
+  const [isBrowser, setIsBrowser] = React.useState<boolean>(false);
+
+  React.useEffect(() => setIsBrowser(true), []);
+
+  if (isBrowser) {
+    return ReactDOM.createPortal(
+      <div
+        className={`${
+          state ? 'block' : 'hidden'
+        } overlay fixed top-0 bottom-0 left-0 right-0 z-10 h-full w-full bg-black opacity-50`}
+      ></div>,
+      document.getElementById('overlay-root') ?? document.body
+    );
+  }
+  return null;
+};
+
 const Header = () => {
+  const [showNavbar, setShowNavbar] = React.useState<boolean>(false);
+
   return (
     <header className="header fixed top-0 left-0 right-0 z-10 bg-white/20 backdrop-blur-[10px]">
       <nav className="navbar m-auto flex h-16 max-w-5xl items-center justify-between px-4">
@@ -40,24 +118,20 @@ const Header = () => {
           ))}
         </ul>
         <div className="grid h-16 items-center justify-end sm:hidden">
-          <ul className="hamburger-open flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100">
-            <li>
-              <span className="hamburger-bar"></span>
-            </li>
-            <li>
-              <span className="hamburger-bar"></span>
-            </li>
-            <li>
-              <span className="hamburger-bar"></span>
-            </li>
+          <ul
+            className="hamburger-open flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
+            onClick={() => setShowNavbar(true)}
+          >
+            <GiHamburgerMenu fontSize={25} />
           </ul>
         </div>
       </nav>
-      <nav className="navbar-mobile fixed top-0 bottom-0 -right-64 z-20 min-h-screen w-64 bg-white px-4 transition-all">
-        <div className="grid h-16 items-center justify-end"></div>
-        <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-8 text-right transition-all"></ul>
-      </nav>
-      <div className="overlay fixed top-0 bottom-0 left-0 right-0 z-10 hidden h-full w-full bg-black opacity-50"></div>
+      <MobileNavbar
+        state={showNavbar}
+        onClose={() => setShowNavbar(false)}
+        navLinks={navLinks}
+      />
+      <Overlay state={showNavbar} />
     </header>
   );
 };
