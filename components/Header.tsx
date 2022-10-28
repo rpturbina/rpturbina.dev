@@ -126,12 +126,12 @@ const Header = () => {
           ))}
         </ul>
         <div className="grid h-16 items-center justify-end sm:hidden">
-          <ul
+          <div
             className="hamburger-open flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
             onClick={() => setShowNavbar(true)}
           >
             <GiHamburgerMenu fontSize={25} />
-          </ul>
+          </div>
         </div>
       </nav>
       <MobileNavbar
