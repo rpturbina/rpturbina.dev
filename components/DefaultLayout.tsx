@@ -25,7 +25,10 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
           property="og:description"
           content="Hello World👋! I'm Rizki Pratama Turbina. Frontend Web Enthusiast | Bring my frontend experiences to solve your problems."
         />
-        <meta property="og:image" content="/images/web-thumbnail.png" />
+        <meta
+          property="og:image"
+          content="https://rpturbina.me/images/web-thumbnail.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://rpturbina.me/" />
