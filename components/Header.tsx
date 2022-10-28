@@ -52,18 +52,18 @@ const MobileNavbar = ({
           state ? 'navbar-show ' : ''
         }navbar-mobile fixed top-0 bottom-0 -right-64 z-20 min-h-screen w-64 bg-white px-4 transition-all`}
       >
-        <div className="grid h-16 items-center justify-end " onClick={onClose}>
+        <div className="grid h-16 items-center justify-end" onClick={onClose}>
           <GrClose
             fontSize={25}
-            className="hamburger-close flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
+            className="hamburger-close mr-3 flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
           />
         </div>
-        <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-8 text-right transition-all">
+        <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-6 text-right transition-all">
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link href={item.href} legacyBehavior>
                 <a
-                  className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
+                  className="inline-block rounded-md py-2 px-3 transition-all hover:bg-slate-200 hover:text-black"
                   aria-label={`Navigate to ${item.label}`}
                   onClick={onClose}
                 >
@@ -111,12 +111,12 @@ const Header = () => {
             </a>
           </Link>
         </h1>
-        <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-12">
+        <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-6">
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link href={item.href} legacyBehavior>
                 <a
-                  className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
+                  className="inline-block rounded-md py-2 px-3 transition-all hover:bg-slate-200 hover:text-black"
                   aria-label={`Navigate to ${item.label}`}
                 >
                   {item.label}
