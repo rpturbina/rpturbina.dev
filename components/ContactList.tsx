@@ -4,17 +4,17 @@ import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
 
 const contactItems: ContactItemProps[] = [
   {
-    label: 'Github Icon',
+    label: 'Contact me via GitHub',
     icon: <FaGithubSquare fontSize={35} />,
     href: 'https://github.com/rpturbina',
   },
   {
-    label: 'LinkedIn Icon',
+    label: 'Contact me via LinkedIn',
     icon: <FaLinkedin fontSize={35} />,
     href: 'https://www.linkedin.com/in/rpturbina/',
   },
   {
-    label: 'Instagram Icon',
+    label: 'Contact me via Instagram',
     icon: <FaInstagramSquare fontSize={35} />,
     href: 'https://www.instagram.com/rpturbina/',
   },

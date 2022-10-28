@@ -60,14 +60,17 @@ const MobileNavbar = ({
         </div>
         <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-8 text-right transition-all">
           {navLinks.map((item) => (
-            <Link href={item.href} key={item.label} legacyBehavior>
-              <a
-                className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
-                onClick={onClose}
-              >
-                {item.label}
-              </a>
-            </Link>
+            <li key={item.label}>
+              <Link href={item.href} legacyBehavior>
+                <a
+                  className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
+                  aria-label={`Navigate to ${item.label}`}
+                  onClick={onClose}
+                >
+                  {item.label}
+                </a>
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>,
@@ -110,11 +113,16 @@ const Header = () => {
         </h1>
         <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-12">
           {navLinks.map((item) => (
-            <Link href={item.href} key={item.label} legacyBehavior>
-              <a className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100">
-                {item.label}
-              </a>
-            </Link>
+            <li key={item.label}>
+              <Link href={item.href} legacyBehavior>
+                <a
+                  className="inline-block opacity-80 transition-all hover:text-black hover:opacity-100"
+                  aria-label={`Navigate to ${item.label}`}
+                >
+                  {item.label}
+                </a>
+              </Link>
+            </li>
           ))}
         </ul>
         <div className="grid h-16 items-center justify-end sm:hidden">

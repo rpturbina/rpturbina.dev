@@ -8,6 +8,7 @@ const ContactItem = ({ label, icon, href }: ContactItemProps) => {
         target="_blank"
         rel="noreferrer"
         className="contact-icon-anchor"
+        aria-label={label}
       >
         {icon}
       </a>
