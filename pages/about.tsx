@@ -1,8 +1,12 @@
+import Head from 'next/head';
 import Image from 'next/image';
 
 const About = () => {
   return (
     <section id="about" className="identity m-auto min-h-screen max-w-7xl px-4">
+      <Head>
+        <title>About | rpturbina</title>
+      </Head>
       <Image
         src="/images/author-photo-hero.webp"
         alt="rpturbina photo"

@@ -1,4 +1,5 @@
 import ContactList from '@components/ContactList';
+import Head from 'next/head';
 
 const Contacts = () => {
   return (
@@ -6,6 +7,9 @@ const Contacts = () => {
       id="contact"
       className="m-auto flex min-h-screen max-w-7xl flex-col items-center justify-center gap-y-4 px-4"
     >
+      <Head>
+        <title>Contact | rpturbina</title>
+      </Head>
       <h2 className="text-center text-2xl font-bold md:text-3xl">
         &#60; Let&apos;s get connected! &#47;&#62;
       </h2>

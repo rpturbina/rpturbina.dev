@@ -1,8 +1,12 @@
+import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <section id="home" className="hero m-auto min-h-screen max-w-7xl px-4">
+      <Head>
+        <title>Home | rpturbina</title>
+      </Head>
       <Image
         src="/images/author-photo-hero.webp"
         alt="rpturbina photo"
