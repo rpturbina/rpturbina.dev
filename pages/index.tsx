@@ -18,7 +18,7 @@ export default function Home() {
       <h2 className="text-2xl font-semibold md:text-3xl">
         &#60; Hello World👋! &#47;&#62;
       </h2>
-      <h3 className="text-center text-2xl font-bold sm:text-3xl">
+      <h3 className="my-3 text-center text-2xl font-bold sm:text-3xl">
         I&apos;m R. Pratama Turbina
       </h3>
       <p className="text-center">

@@ -27,12 +27,6 @@ li {
   list-style: none;
 }
 
-h3 {
-  font-size: 20px;
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-}
-
 body {
   scrollbar-width: none; /* Firefox */
 }
@@ -104,19 +98,6 @@ body::-webkit-scrollbar {
 
 .project-description {
   padding-bottom: 1rem;
-}
-
-.project-link {
-  padding-top: 1rem;
-  display: flex;
-  column-gap: 0.8rem;
-  padding-bottom: 1rem;
-  opacity: 0.6;
-  transition: var(--transition-value);
-}
-
-.project-link:hover {
-  opacity: 1;
 }
 
 .contact-icon {
