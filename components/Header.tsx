@@ -55,7 +55,7 @@ const MobileNavbar = ({
         <div className="grid h-16 items-center justify-end" onClick={onClose}>
           <GrClose
             fontSize={25}
-            className="hamburger-close mr-3 flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
+            className="hamburger-close flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
           />
         </div>
         <ul className="navlinks navlinks-mobile mt-8 flex flex-col gap-y-6 text-right transition-all">
