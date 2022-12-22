@@ -111,7 +111,7 @@ const Header = () => {
             </a>
           </Link>
         </h1>
-        <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-6">
+        <ul className="navlinks navlinks-desktop hidden sm:flex sm:gap-x-3">
           {navLinks.map((item) => (
             <li key={item.label}>
               <Link href={item.href} legacyBehavior>
