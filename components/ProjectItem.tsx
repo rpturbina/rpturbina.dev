@@ -12,20 +12,24 @@ const ProjectItem = ({
   return (
     <li className="project-item">
       <h3 className="mb-3 text-xl font-bold">{title}</h3>
-      <p className="project-descriptiion">{description}</p>
+      <p className="line-clamp-4" title={description}>
+        {description}
+      </p>
       <p className="py-4">
         <strong>Tech Stack : </strong> {stack}
       </p>
       <div className="flex gap-x-3">
-        <a
-          href={repoLink}
-          target="_blank"
-          rel="noreferrer"
-          className="opacity-60 transition-opacity hover:opacity-100"
-          title="Go to project repo"
-        >
-          <IoLogoGithub fontSize={24} />
-        </a>
+        {repoLink && (
+          <a
+            href={repoLink}
+            target="_blank"
+            rel="noreferrer"
+            className="opacity-60 transition-opacity hover:opacity-100"
+            title="Go to project repo"
+          >
+            <IoLogoGithub fontSize={24} />
+          </a>
+        )}
         <a
           href={demoLink}
           target="_blank"

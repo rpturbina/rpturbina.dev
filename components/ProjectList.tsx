@@ -5,6 +5,20 @@ const BASE_DOMAIN = 'rpturbina.github.io';
 
 const projectItems: ProjectItemProps[] = [
   {
+    title: 'ThreadNVote Web App',
+    description:
+      "ThreadNVote is a web-based application that you can create threads, vote and comment other user's threads. I built this project for a course final submission. This app is using Dicoding Forum API as a backend.",
+    stack: 'React.js, Tailwind CSS, React Redux',
+    demoLink: 'https://thread-n-vote.vercel.app/',
+  },
+  {
+    title: 'Enveir Landing Page',
+    description:
+      'This is my first freelance project as a Frontend Developer. I built this landing page that belongs to Enveir, an IT Services and IT Consulting Company. I co-worked with other frontend developer to do this project.',
+    stack: 'SvelteKit, TypeScript, Tailwind CSS',
+    demoLink: 'https://www-enveir.vercel.app/',
+  },
+  {
     title: 'UrSpotify App (Generasi Gigih 2.0 Final Project)',
     description:
       'UrSpotify is a web-based application that can create playlists for the Spotify app easily. This app consume Spotify Web API.',
