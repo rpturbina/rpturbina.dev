@@ -5,7 +5,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="m-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pt-24 pb-12"
+      className="m-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pb-12 pt-24"
     >
       <Head>
         <title>Portfolio | rpturbina</title>
