@@ -5,9 +5,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        accent: 'hsl(var(--color-accent) / <alpha-value>)',
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
 };

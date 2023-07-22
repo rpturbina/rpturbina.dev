@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-accent: 218deg 24% 28%;
+  }
+}
+
 *,
 ::after,
 ::before {
@@ -12,19 +18,11 @@
 /* Custom variables */
 :root {
   --transition-value: all 0.3s ease;
-  --accent-color: #364359;
+  --accent-color: hsl(218, 24%, 28%);
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
 }
 
 body {
@@ -42,32 +40,6 @@ body::-webkit-scrollbar {
 
 .navbar-show {
   right: 0;
-}
-
-.navlinks li {
-  display: block;
-}
-
-.navlinks li a {
-  opacity: 0.8;
-  display: inline-block;
-  transition: var(--transition-value);
-}
-
-.navlinks li a:hover {
-  opacity: 1;
-  color: #000;
-}
-
-.hamburger-close {
-  color: var(--accent-color);
-}
-
-.hamburger-bar {
-  display: block;
-  width: 25px;
-  height: 2.5px;
-  background-color: var(--accent-color);
 }
 
 .hero {
