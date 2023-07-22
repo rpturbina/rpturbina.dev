@@ -1,13 +1,13 @@
-export interface ProjectItemProps {
+export type ProjectItemProps = {
   title: string;
   description: string;
   stack: string;
   repoLink?: string;
   demoLink: string;
-}
+};
 
-export interface ContactItemProps {
+export type ContactItemProps = {
   label: string;
   icon: React.ReactNode;
   href: string;
-}
+};
