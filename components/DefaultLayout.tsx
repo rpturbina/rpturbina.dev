@@ -15,6 +15,10 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
           name="google-site-verification"
           content="iYaPdXA7jK6VjMnUKSWUKAu00-O4MJj6eFc7UlD-d34"
         />
+        <meta
+          name="google-site-verification"
+          content="ve2nh-XWGJlQeI0S14RmfptQ4euzr194GG43wLG3Hyg"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rpturbina.me/" />
         <meta
