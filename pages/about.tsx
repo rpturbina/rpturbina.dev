@@ -1,11 +1,12 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from 'next/head'
+import Image from 'next/image'
 
 const About = () => {
   return (
     <section id="about" className="identity m-auto min-h-screen max-w-7xl px-4">
       <Head>
         <title>About | rpturbina</title>
+        <link rel="canonical" href="https://rpturbina.vercel.app/about" />
       </Head>
       <Image
         src="/images/author-photo-hero.webp"
@@ -32,6 +33,6 @@ const About = () => {
         </a>
       </p>
     </section>
-  );
-};
-export default About;
+  )
+}
+export default About

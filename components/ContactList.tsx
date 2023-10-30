@@ -1,6 +1,6 @@
-import { ContactItemProps } from '@typings/index';
-import ContactItem from '@components/ContactItem';
-import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa';
+import ContactItem from '@/components/ContactItem'
+import { ContactItemProps } from '@/typings/index'
+import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 
 const contactItems: ContactItemProps[] = [
   {
@@ -18,7 +18,7 @@ const contactItems: ContactItemProps[] = [
     icon: <FaInstagramSquare fontSize={35} />,
     href: 'https://www.instagram.com/rpturbina/',
   },
-];
+]
 
 const ContactList = () => {
   return (
@@ -32,6 +32,6 @@ const ContactList = () => {
         />
       ))}
     </ul>
-  );
-};
-export default ContactList;
+  )
+}
+export default ContactList

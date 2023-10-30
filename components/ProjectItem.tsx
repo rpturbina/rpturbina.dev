@@ -1,6 +1,6 @@
-import { ProjectItemProps } from '@typings/index';
-import { FiExternalLink } from 'react-icons/fi';
-import { IoLogoGithub } from 'react-icons/io';
+import { ProjectItemProps } from '@/typings/index'
+import { FiExternalLink } from 'react-icons/fi'
+import { IoLogoGithub } from 'react-icons/io'
 
 const ProjectItem = ({
   title,
@@ -41,6 +41,6 @@ const ProjectItem = ({
         </a>
       </div>
     </li>
-  );
-};
-export default ProjectItem;
+  )
+}
+export default ProjectItem

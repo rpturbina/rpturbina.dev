@@ -1,4 +1,4 @@
-import { ContactItemProps } from '@typings/index';
+import { ContactItemProps } from '@/typings/index'
 
 const ContactItem = ({ label, icon, href }: ContactItemProps) => {
   return (
@@ -13,6 +13,6 @@ const ContactItem = ({ label, icon, href }: ContactItemProps) => {
         {icon}
       </a>
     </li>
-  );
-};
-export default ContactItem;
+  )
+}
+export default ContactItem

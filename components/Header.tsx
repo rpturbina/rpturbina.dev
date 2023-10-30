@@ -1,8 +1,8 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import Link from 'next/link';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { GrClose } from 'react-icons/gr';
+import Link from 'next/link'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { GrClose } from 'react-icons/gr'
 
 export default function Header() {
   return (
@@ -13,7 +13,7 @@ export default function Header() {
         <HamburgerNavbar />
       </nav>
     </header>
-  );
+  )
 }
 
 const HeaderLogo = () => {
@@ -25,8 +25,8 @@ const HeaderLogo = () => {
     >
       <h1>rpturbina</h1>
     </Link>
-  );
-};
+  )
+}
 
 const NAV_LINKS: Array<{ label: string; href: string }> = [
   {
@@ -45,7 +45,7 @@ const NAV_LINKS: Array<{ label: string; href: string }> = [
     label: 'About',
     href: '/about',
   },
-];
+]
 
 const NavbarLinks = () => {
   return (
@@ -62,11 +62,11 @@ const NavbarLinks = () => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
 const HamburgerNavbar = () => {
-  const [showNavbar, setShowNavbar] = React.useState<boolean>(false);
+  const [showNavbar, setShowNavbar] = React.useState<boolean>(false)
 
   return (
     <>
@@ -81,27 +81,27 @@ const HamburgerNavbar = () => {
       <MobileNavbar state={showNavbar} onClose={() => setShowNavbar(false)} />
       <Overlay state={showNavbar} onClose={() => setShowNavbar(false)} />
     </>
-  );
-};
+  )
+}
 
 const MobileNavbar = ({
   state,
   onClose,
 }: {
-  state: boolean;
-  onClose: React.ReactEventHandler;
+  state: boolean
+  onClose: React.ReactEventHandler
 }) => {
-  const [isBrowser, setIsBrowser] = React.useState<boolean>(false);
+  const [isBrowser, setIsBrowser] = React.useState<boolean>(false)
 
-  React.useEffect(() => setIsBrowser(true), []);
+  React.useEffect(() => setIsBrowser(true), [])
 
   React.useEffect(() => {
     if (isBrowser && state) {
-      document.body.style['overflow'] = 'hidden';
+      document.body.style['overflow'] = 'hidden'
     } else if (isBrowser && !state) {
-      document.body.style['overflow'] = 'initial';
+      document.body.style['overflow'] = 'initial'
     }
-  }, [isBrowser, state]);
+  }, [isBrowser, state])
 
   if (isBrowser) {
     return ReactDOM.createPortal(
@@ -132,21 +132,21 @@ const MobileNavbar = ({
         </ul>
       </nav>,
       document.getElementById('navbar-root') ?? document.body
-    );
+    )
   }
-  return null;
-};
+  return null
+}
 
 const Overlay = ({
   state,
   onClose,
 }: {
-  state: boolean;
-  onClose: () => void;
+  state: boolean
+  onClose: () => void
 }) => {
-  const [isBrowser, setIsBrowser] = React.useState<boolean>(false);
+  const [isBrowser, setIsBrowser] = React.useState<boolean>(false)
 
-  React.useEffect(() => setIsBrowser(true), []);
+  React.useEffect(() => setIsBrowser(true), [])
 
   if (isBrowser) {
     return ReactDOM.createPortal(
@@ -157,7 +157,7 @@ const Overlay = ({
         onClick={onClose}
       />,
       document.getElementById('overlay-root') ?? document.body
-    );
+    )
   }
-  return null;
-};
+  return null
+}

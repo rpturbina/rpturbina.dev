@@ -1,6 +1,6 @@
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Head from 'next/head';
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Head from 'next/head'
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,14 +13,10 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <meta
           name="google-site-verification"
-          content="iYaPdXA7jK6VjMnUKSWUKAu00-O4MJj6eFc7UlD-d34"
-        />
-        <meta
-          name="google-site-verification"
-          content="ve2nh-XWGJlQeI0S14RmfptQ4euzr194GG43wLG3Hyg"
+          content="DKjTbreLxLLh2O2bDI2SfcSMnuc9hDUHFAR9jyvwJkE"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rpturbina.me/" />
+        <meta property="og:url" content="https://rpturbina.vercel.app/" />
         <meta
           property="og:title"
           content="rpturbina | Personal Website by Rizki Pratama Turbina"
@@ -31,11 +27,11 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <meta
           property="og:image"
-          content="https://rpturbina.me/images/web-thumbnail.png"
+          content="https://rpturbina.vercel.app/images/web-thumbnail.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://rpturbina.me/" />
+        <meta property="twitter:url" content="https://rpturbina.vercel.app/" />
         <meta
           property="twitter:title"
           content="rpturbina | Personal Website by Rizki Pratama Turbina"
@@ -46,7 +42,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
         />
         <meta
           property="twitter:image"
-          content="https://rpturbina.me/src/images/meta-tags-rpturbina.me.png"
+          content="https://rpturbina.vercel.app/src/images/meta-tags-rpturbina.me.png"
         />
         <meta
           name="keywords"
@@ -57,6 +53,6 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
       <main className="mx-auto max-w-5xl">{children}</main>
       <Footer />
     </>
-  );
-};
-export default DefaultLayout;
+  )
+}
+export default DefaultLayout
