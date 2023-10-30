@@ -1,7 +1,7 @@
-import ProjectItem from '@components/ProjectItem';
-import { ProjectItemProps } from '@typings/index';
+import ProjectItem from '@/components/ProjectItem'
+import { ProjectItemProps } from '@/typings/index'
 
-const BASE_DOMAIN = 'rpturbina.github.io';
+const BASE_DOMAIN = 'rpturbina.github.io'
 
 const projectItems: ProjectItemProps[] = [
   {
@@ -18,14 +18,14 @@ const projectItems: ProjectItemProps[] = [
     stack: 'SvelteKit, TypeScript, Tailwind CSS',
     demoLink: 'https://www-enveir.vercel.app/',
   },
-  {
-    title: 'UrSpotify App (Generasi Gigih 2.0 Final Project)',
-    description:
-      'UrSpotify is a web-based application that can create playlists for the Spotify app easily. This app consume Spotify Web API.',
-    stack: 'React.js, Chakra UI',
-    repoLink: 'https://github.com/rpturbina/homework-spotify-app',
-    demoLink: `https://urspotify.rpturbina.me/`,
-  },
+  // {
+  //   title: 'UrSpotify App (Generasi Gigih 2.0 Final Project)',
+  //   description:
+  //     'UrSpotify is a web-based application that can create playlists for the Spotify app easily. This app consume Spotify Web API.',
+  //   stack: 'React.js, Chakra UI',
+  //   repoLink: 'https://github.com/rpturbina/homework-spotify-app',
+  //   demoLink: `https://urspotify.vercel.app/`,
+  // },
   {
     title: 'Tribute Page - B. J. Habibie',
     description:
@@ -50,11 +50,11 @@ const projectItems: ProjectItemProps[] = [
     repoLink: 'https://github.com/rpturbina/fcc-technical-doc/',
     demoLink: `https://${BASE_DOMAIN}/fcc-technical-doc/`,
   },
-];
+]
 
 const ProjectList = () => {
   return (
-    <ul className="projects md:flex md:flex-wrap md:justify-between md:gap-6">
+    <ul className="projects md:flex md:flex-wrap md:gap-6">
       {projectItems.map((item) => (
         <ProjectItem
           key={item.title}
@@ -66,6 +66,6 @@ const ProjectList = () => {
         />
       ))}
     </ul>
-  );
-};
-export default ProjectList;
+  )
+}
+export default ProjectList

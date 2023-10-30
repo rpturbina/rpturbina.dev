@@ -1,11 +1,12 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from 'next/head'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <section id="home" className="hero m-auto min-h-screen max-w-7xl px-4">
       <Head>
         <title>Home | rpturbina</title>
+        <link rel="canonical" href="https://rpturbina.vercel.app/" />
       </Head>
       <Image
         src="/images/author-photo-hero.webp"
@@ -26,5 +27,5 @@ export default function Home() {
         to solve your problems
       </p>
     </section>
-  );
+  )
 }

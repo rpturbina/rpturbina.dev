@@ -1,5 +1,5 @@
-import ContactList from '@components/ContactList';
-import Head from 'next/head';
+import ContactList from '@/components/ContactList'
+import Head from 'next/head'
 
 const Contacts = () => {
   return (
@@ -9,6 +9,7 @@ const Contacts = () => {
     >
       <Head>
         <title>Contact | rpturbina</title>
+        <link rel="canonical" href="https://rpturbina.vercel.app/contact" />
       </Head>
       <h2 className="text-center text-2xl font-bold md:text-3xl">
         &#60; Let&apos;s get connected! &#47;&#62;
@@ -27,6 +28,6 @@ const Contacts = () => {
       </p>
       <ContactList />
     </section>
-  );
-};
-export default Contacts;
+  )
+}
+export default Contacts
