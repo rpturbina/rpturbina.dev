@@ -21,7 +21,7 @@ const HeaderLogo = () => {
     <Link
       href="/"
       className="block text-xl font-bold opacity-80 transition-all hover:opacity-100"
-      tabIndex={1}
+      tabIndex={0}
     >
       <h1>rpturbina</h1>
     </Link>
@@ -74,6 +74,8 @@ const HamburgerNavbar = () => {
         <button
           className="flex cursor-pointer flex-col justify-center gap-y-1 opacity-70 transition-all hover:text-black hover:opacity-100"
           onClick={() => setShowNavbar(true)}
+          type="button"
+          aria-label="hamburger menu"
         >
           <GiHamburgerMenu fontSize={25} />
         </button>
