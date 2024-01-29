@@ -11,10 +11,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
           name="description"
           content="Hello World👋! I'm Rizki Pratama Turbina. Frontend Web Enthusiast | Bring my frontend experiences to solve your problems."
         />
-        <meta
-          name="google-site-verification"
-          content="DKjTbreLxLLh2O2bDI2SfcSMnuc9hDUHFAR9jyvwJkE"
-        />
+        <meta name="google-site-verification" content="ve2nh-XWGJlQeI0S14RmfptQ4euzr194GG43wLG3Hyg" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rpturbina.vercel.app/" />
         <meta
